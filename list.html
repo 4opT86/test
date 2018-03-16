@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Листочок</title>
+
+</head>
+<body>
+<div>
+    <h1>Ахуєнний блог</h1>
+    <?php
+    foreach ($posts as $post){
+    //print_r ($post);
+?>
+      <div>
+
+          <h2><?=$post['title']; ?></h2>
+          <p><?=$post['shorttext']?></p>
+        <a href="read.php?id=<?=$post['id']?>">читай дальше</a>
+        <p><?=$post['date']?></p>
+        <hr>
+    </div>
+    <?php
+    }
+    ?>
+    </div>
+
+</body>
+</html>
